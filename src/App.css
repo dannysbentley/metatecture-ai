@@ -60,17 +60,21 @@ h2 {
 .app-img{
   max-width: 100%;
 }
-
-.app-button{
+button{
   padding: 8px;
   color: #353470;
-  background-color: white;
+  background-color: whitesmoke;
   border-color: #00ccff;
-  border-radius: 4px;
+  color:#00ccff;
+  border-radius: 18px;
   font-size: 18px;
   text-align: center;
   margin: 24px;
   font-family: Arial, Helvetica, sans-serif;
+  transition-duration: 0.4s;
+}
+button:hover{
+  background-color: rgb(233,233,233, 0.3);
 }
 .result-text{
   font-size: 24px;

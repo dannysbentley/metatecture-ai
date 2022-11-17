@@ -7,7 +7,7 @@ function App() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
   const [placeholder, setPlaceholder] = useState(
-    "Search Bears with Paint Brushes the Starry Night, painted by Vincent Van Gogh.."
+    "cyber punk light purple dinning room with white cat"
   );
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_Open_AI_Key,
@@ -40,7 +40,7 @@ function App() {
       ) : (
         <>
         <div className="app-form">          
-          <img src="./img/metatecture_banner.png"/>
+          <img src="./metatecture_banner.png"/>
           <h3>AI | Design</h3>
           <h2>Name</h2>
           <textarea 
