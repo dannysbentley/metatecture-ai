@@ -13,6 +13,7 @@ function App() {
     apiKey: import.meta.env.VITE_Open_AI_Key,
   });
 
+  console.log(import.meta.env.VITE_Open_AI_Key)
   const openai = new OpenAIApi(configuration);
 
   const generateImage = async () => {
@@ -23,6 +24,7 @@ function App() {
       n: 1,
       size: "512x512",
     });
+    console.log(res)
     setLoading(false);
     setResult(res.data.data[0].url);
   };
@@ -31,7 +33,7 @@ function App() {
       {loading ? (
         <>
           <h2>Generating..Please Wait..</h2>
-          <div class="lds-ripple">
+          <div className="lds-ripple">
             <div></div>
             <div></div>
           </div>
