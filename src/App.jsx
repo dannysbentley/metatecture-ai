@@ -24,7 +24,6 @@ function App() {
       n: 1,
       size: "512x512",
     });
-    console.log(res)
     setLoading(false);
     setResult(res.data.data[0].url);
   };
