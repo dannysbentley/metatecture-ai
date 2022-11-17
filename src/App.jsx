@@ -4,15 +4,15 @@ import "./App.css";
 
 function App() {
   const [prompt, setPrompt] = useState("");
+  const [name, setName] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
   const [placeholder, setPlaceholder] = useState(
-    "Search Bears with Paint Brushes the Starry Night, painted by Vincent Van Gogh.."
+    "Cat eating pizza on the moon"
   );
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_Open_AI_Key,
   });
-
   console.log(import.meta.env.VITE_Open_AI_Key)
   const openai = new OpenAIApi(configuration);
 
@@ -22,7 +22,7 @@ function App() {
     const res = await openai.createImage({
       prompt: prompt,
       n: 1,
-      size: "512x512",
+      size: "516x516",
     });
     setLoading(false);
     setResult(res.data.data[0].url);
@@ -31,7 +31,7 @@ function App() {
     <div className="app-main">
       {loading ? (
         <>
-          <h2>Generating..Please Wait..</h2>
+          <h3>Generating..Please Wait..</h3>
           <div className="lds-ripple">
             <div></div>
             <div></div>
@@ -39,21 +39,34 @@ function App() {
         </>
       ) : (
         <>
-          <h2>Generate an Image using Open AI API</h2>
-
+        <form className="app-form">          
+          <img src="./img/metatecture_banner.png"/>
+          <h3>AI | Design</h3>
+          <h2>Name</h2>
+          <textarea 
+          className="app-input-name"
+          placeholder="First Name"
+          onChange={(e) => setName(e.target.value)}
+          />
+          <h2>Imagine a design</h2>
           <textarea
             className="app-input"
             placeholder={placeholder}
-            onChange={(e) => setPrompt(e.target.value)}
+            onChange={(e) => setPrompt(e.target.value.concat(" 4k, realistic, cinematic, photorealistic") )}
             rows="10"
             cols="40"
           />
-          <button onClick={generateImage}>Generate an Image</button>
-          {result.length > 0 ? (
-            <img className="result-image" src={result} alt="result" />
-          ) : (
-            <></>
-          )}
+          <button className="app-button"
+          onClick={generateImage}>Generate</button>
+        </form>
+        {
+        result.length > 0 ? (
+          <div className="result-text">{name}</div>) : ( <></> )
+        }
+        {
+        result.length > 0 ? (
+          <img className="result-image"  src={result} alt="result" />) : ( <></> )
+        }
         </>
       )}
     </div>
