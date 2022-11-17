@@ -4,26 +4,26 @@ import "./App.css";
 
 function App() {
   const [prompt, setPrompt] = useState("");
-  const [name, setName] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
   const [placeholder, setPlaceholder] = useState(
-    "Cat eating pizza on the moon"
+    "Search Bears with Paint Brushes the Starry Night, painted by Vincent Van Gogh.."
   );
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_Open_AI_Key,
   });
-  console.log(import.meta.env.VITE_Open_AI_Key)
-  const openai = new OpenAIApi(configuration);
 
+  const openai = new OpenAIApi(configuration);
+  console.log(import.meta.env.VITE_Open_AI_Key)
   const generateImage = async () => {
     setPlaceholder(`Search ${prompt}..`);
     setLoading(true);
     const res = await openai.createImage({
       prompt: prompt,
       n: 1,
-      size: "516x516",
+      size: "512x512",
     });
+    console.log(res)
     setLoading(false);
     setResult(res.data.data[0].url);
   };
@@ -39,7 +39,7 @@ function App() {
         </>
       ) : (
         <>
-        <form className="app-form">          
+        <div className="app-form">          
           <img src="./img/metatecture_banner.png"/>
           <h3>AI | Design</h3>
           <h2>Name</h2>
@@ -52,13 +52,13 @@ function App() {
           <textarea
             className="app-input"
             placeholder={placeholder}
-            onChange={(e) => setPrompt(e.target.value.concat(" 4k, realistic, cinematic, photorealistic") )}
+            onChange={(e) => setPrompt(e.target.value + " 4k, realistic, cinematic, photorealistic" )}
             rows="10"
             cols="40"
           />
           <button className="app-button"
           onClick={generateImage}>Generate</button>
-        </form>
+        </div>
         {
         result.length > 0 ? (
           <div className="result-text">{name}</div>) : ( <></> )

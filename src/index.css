@@ -5,20 +5,3 @@
   color-scheme: light dark;
   background-image: linear-gradient(to right, rgb(0, 238, 255) ,rgb(204, 0, 255), rgb(255, 0, 179) );;
 }
-
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  padding: 8px;
-  color: #00ccff;
-  background-color: white;
-  border-color: #00ccff;
-  border: 4px;
-  border-radius: 4px;
-  font-size: 18px;
-  text-align: center;
-  margin: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-}
