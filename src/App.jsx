@@ -40,7 +40,7 @@ function App() {
       ) : (
         <>
         <div className="app-form">          
-          <img src="./metatecture_banner.png"/>
+          <img src="https://i.ibb.co/BZnRSR4/metatecture-banner.png" alt="metatecture-banner"/>
           <h3>AI | Design</h3>
           <h2>Name</h2>
           <textarea 
