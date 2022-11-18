@@ -46,7 +46,7 @@ function App() {
           <h2>Name</h2>
           <textarea 
           className="app-input-name"
-          placeholder="First Name"
+          placeholder="Enter Name"
           onChange={(e) => setName(e.target.value)}
           />
           <h2>Imagine a design</h2>
