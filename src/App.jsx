@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
   const [prompt, setPrompt] = useState("");
   const [result, setResult] = useState("");
+  const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
   const [placeholder, setPlaceholder] = useState(
     "cyber punk light purple dinning room with white cat"
@@ -52,7 +53,7 @@ function App() {
           <textarea
             className="app-input"
             placeholder={placeholder}
-            onChange={(e) => setPrompt(e.target.value + " 4k, realistic, cinematic, photorealistic" )}
+            onChange={(e) => setPrompt(e.target.value)}
             rows="10"
             cols="40"
           />

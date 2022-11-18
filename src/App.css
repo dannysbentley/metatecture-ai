@@ -38,6 +38,7 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 .app-input-name{
+  align-items: center;
   font-size: 18px;
   resize: none;
   height: 24px;
@@ -48,6 +49,7 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 .app-input{
+  align-items: center;
   font-size: 18px;
   resize: none;
   height: 48px;
