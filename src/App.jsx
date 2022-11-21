@@ -10,12 +10,16 @@ function App() {
   const [placeholder, setPlaceholder] = useState(
     "cyber punk light purple dinning room with white cat"
   );
+
+  // API key 
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_Open_AI_Key,
   });
 
+// Open AI configuration 
   const openai = new OpenAIApi(configuration);
 
+  // Generate an image using the form
   const generateImage = async () => {
     setPlaceholder(`Search ${prompt}..`);
     setLoading(true);
@@ -28,6 +32,8 @@ function App() {
     setLoading(false);
     setResult(res.data.data[0].url);
   };
+
+  // Return the html website 
   return (
     <div className="app-main">
       {loading ? (
