@@ -16,48 +16,57 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  width: 340px;
-  background-color: rgb(233,233,233, 0.9);
+  width: 50%;
+  background-color: black;
   margin-bottom: 24px;
 }
 h3 {
-  font-size: 36px;
-  font-weight: normal;
+  font-size: 32px;
+  font-weight:bold;
   line-height: 40px;
-  color: #3b3b3b;
-  margin: 16px 0 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #7AB575;
+  margin: 10px 0 20px;
+  font-family: Helvetica, sans-serif;
 }
 h2 {
   font-size: 18px;
   font-weight: normal;
   line-height: 1px;
-  color: #3b3b3b;
+  color: #ffffff;
   margin: 20px 0 20px;
   text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
+}
+.intro {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1px;
+  color: #7AB575;
+  text-align: center;
+  margin: 40px 0 20px;
+  font-family: Helvetica, sans-serif;
 }
 .app-input-name{
   align-items: center;
   font-size: 18px;
   resize: none;
   height: 24px;
-  width: 90%;
-  border-radius: 4px;
-  border-color: #00ccff;
-  color: #353740;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 95%;
+  border-radius: 2px;
+  background-color: rgb(160, 160, 160);
+  color: #000000;
+  font-family: Helvetica, sans-serif;
 }
 .app-input{
   align-items: center;
   font-size: 18px;
   resize: none;
   height: 48px;
-  width: 90%;
-  border-radius: 4px;
-  border-color: #00ccff;
-  color: #353740;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 95%;
+  border-radius: 2px;
+  background-color: rgb(160, 160, 160);
+  color: #000000;
+  font-family: Helvetica, sans-serif;
 }
 .app-img{
   max-width: 100%;
@@ -65,14 +74,13 @@ h2 {
 button{
   padding: 8px;
   color: #353470;
-  background-color: whitesmoke;
-  border-color: #00ccff;
-  color:#00ccff;
+  background-color: #7AB575;
+  color:#000000;
   border-radius: 18px;
   font-size: 18px;
   text-align: center;
   margin: 24px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   transition-duration: 0.4s;
 }
 button:hover{

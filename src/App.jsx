@@ -15,7 +15,7 @@ function App() {
   });
 
   const openai = new OpenAIApi(configuration);
-  console.log(import.meta.env.VITE_Open_AI_Key)
+
   const generateImage = async () => {
     setPlaceholder(`Search ${prompt}..`);
     setLoading(true);
@@ -42,7 +42,8 @@ function App() {
         <>
         <div className="app-form">          
           <img src="https://i.ibb.co/BZnRSR4/metatecture-banner.png" alt="metatecture-banner"/>
-          <h3>AI | Design</h3>
+          <h2 className="intro">Introducting our</h2>
+          <h3>AI Design Modeling System</h3>
           <h2>Name</h2>
           <textarea 
           className="app-input-name"
