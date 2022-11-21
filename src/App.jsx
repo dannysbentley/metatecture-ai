@@ -47,7 +47,7 @@ function App() {
       ) : (
         <>
         <div className="app-form">          
-          <img src="https://i.ibb.co/BZnRSR4/metatecture-banner.png" alt="metatecture-banner"/>
+          <img className= "app-img" src="https://i.ibb.co/SstZ80m/metatecture-BW.png" alt="metatecture-banner"/>
           <h2 className="intro">Introducing our</h2>
           <h3>AI Design Modeling System</h3>
           <h2>Name</h2>

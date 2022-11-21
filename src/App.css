@@ -70,6 +70,7 @@ h2 {
 }
 .app-img{
   max-width: 100%;
+  filter:brightness(10);
 }
 button{
   padding: 8px;
