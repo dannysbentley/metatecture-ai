@@ -99,7 +99,7 @@ function App() {
             <option>Instagram, Hipstamatic</option>
             </datalist>
 
-          <h2>Optional - Photography</h2>
+          <h2>Optional - Photography Style</h2>
           <input type="text" list="photography" className="app-list"
           onChange={(e) => setPhoto(e.target.value)}/>
           <datalist id="photography">
@@ -114,7 +114,7 @@ function App() {
             <option>over-the-shoulder</option>
             </datalist>
             
-          <h2>Optional - Camera</h2>
+          <h2>Optional - Camera Type</h2>
           <input type="text" list="camera" className="app-list"
           onChange={(e) => setCamera(e.target.value)}/>
           <datalist id="camera">
@@ -128,7 +128,7 @@ function App() {
             <option>Deep depth of field,</option>
             </datalist>
           
-            <h2>Optional - Lighting</h2>
+            <h2>Optional - Lighting Settings</h2>
           <input type="text" list="lighting" className="app-list"
           onChange={(e) => setLight(e.target.value)}/>
           <datalist id="lighting">
