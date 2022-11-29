@@ -20,6 +20,8 @@ function App() {
     "cyber punk light purple dinning room with white cat"
   );
 
+  const temp = '';
+
   // API key 
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_Open_AI_Key,
@@ -43,7 +45,21 @@ function App() {
   };
 
   // Google Sheet API
-  
+  const handleSubmit = async e => {
+    //alert("hello");
+    e.preventDefault();
+    try {
+      await fetch("https://v1.nocodeapi.com/metatecture/google_sheets/iAgonfsHbfArJpJu?tabId=data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify([[result, name]]),
+      })
+    } catch (err) {
+      console.log("google apinocode. " + err)
+    }
+  }
 
   // Return the html website 
   return (
@@ -79,6 +95,7 @@ function App() {
             cols="40"
           />
           <br></br>
+          
           <h2>Optional - Vibe</h2>
           <input type="text" list="vibes1" className="app-list"
           onChange={(e) => setVibe(e.target.value)}/>
@@ -146,14 +163,13 @@ function App() {
           <button className="app-button"
           onClick={generateImage}>Generate</button>
         </div>
-        {
-        result.length > 0 ? (
+
+        { result.length > 0 ? (
           <div className="result-text">{name}</div>) : ( <></> )
         }
-        {
-        result.length > 0 ? (
-          <img className="result-image"  src={result} alt="result" />) : ( <></> )
-        }
+        { result.length > 0 ? (
+          <img onLoad={handleSubmit} className="result-image"  src={result} alt="result" />) : ( <></> )
+        }       
         </>
       )}
     </div>
