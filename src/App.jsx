@@ -54,7 +54,7 @@ function App() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify([[result, name]]),
+        body: JSON.stringify([[result, name, prompt]]),
       })
     } catch (err) {
       console.log("google apinocode. " + err)
@@ -95,7 +95,7 @@ function App() {
             cols="40"
           />
           <br></br>
-          
+
           <h2>Optional - Vibe</h2>
           <input type="text" list="vibes1" className="app-list"
           onChange={(e) => setVibe(e.target.value)}/>
