@@ -26,7 +26,7 @@ h3 {
   line-height: 40px;
   color: #7AB575;
   margin: 10px 0 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
 }
 h2 {
   font-size: 18px;
@@ -35,7 +35,14 @@ h2 {
   color: #ffffff;
   margin: 20px 0 20px;
   text-align: left;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
+}
+p {
+  font-size: 24px;
+  font-weight: normal;
+  color: #ffffff;
+  overflow-wrap: break-word;
+  font-family: Helvetica, sans-serif, Arial;
 }
 .intro {
   font-size: 18px;
@@ -44,7 +51,7 @@ h2 {
   color: #7AB575;
   text-align: center;
   margin: 40px 0 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
 }
 .app-input-name{
   align-items: center;
@@ -55,7 +62,7 @@ h2 {
   border-radius: 2px;
   background-color: rgb(160, 160, 160);
   color: #000000;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
 }
 .app-input{
   align-items: center;
@@ -66,7 +73,7 @@ h2 {
   border-radius: 2px;
   background-color: rgb(160, 160, 160);
   color: #000000;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
 }
 .app-list{
   align-items: center;
@@ -77,7 +84,7 @@ h2 {
   border-radius: 2px;
   background-color: rgb(160, 160, 160);
   color: #000000;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
 }
 .app-img{
   max-width: 80%;
@@ -92,7 +99,7 @@ button{
   font-size: 18px;
   text-align: center;
   margin: 24px;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
   transition-duration: 0.4s;
 }
 button:hover{
@@ -103,7 +110,7 @@ button:hover{
   font-weight: normal;
   color: whitesmoke;
   margin: 20px 0 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif, Arial;
 }
 .result-image {
   margin-top: 20px;

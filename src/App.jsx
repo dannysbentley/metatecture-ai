@@ -8,19 +8,16 @@ function App() {
   // image generator options 
   const [prompt, setPrompt] = useState("");
   const [vibe, setVibe] = useState("");
-  const [photo, setPhoto] = useState("");
-  const [camera, setCamera] = useState("");
-  const [light, setLight] = useState("");
+  const [flooring, setFlooring] = useState("");
+  const [ceiling, setCeiling] = useState("");
 
   // generator result image
   const [result, setResult] = useState("");
   
   const [loading, setLoading] = useState(false);
   const [placeholder, setPlaceholder] = useState(
-    "cyber punk light purple dinning room with white cat"
+    "Spring in Rome Italy in light blue room with a gray kitten."
   );
-
-  const temp = '';
 
   // API key 
   const configuration = new Configuration({
@@ -35,11 +32,10 @@ function App() {
     setPlaceholder(`Search ${prompt}..`);
     setLoading(true);
     const res = await openai.createImage({
-      prompt: prompt + " " + vibe + " " + photo + " " + camera + " " + light,
+      prompt: "very large bedroom suite and livingroom " + prompt + " " + vibe + " " + ceiling + " " + flooring + ", golden hour" + ", wide angle lens, 15mm" + ", highly detailed" + ", realistic" + ", 8k",
       n: 1,
       size: "512x512",
     });
-    console.log(res)
     setLoading(false);
     setResult(res.data.data[0].url);
   };
@@ -79,14 +75,18 @@ function App() {
           <h2 className="intro">Introducing our</h2>
           <h3>AI Design Modeling System</h3>
 
-          <h2>Name</h2>
+          <h2>Email</h2>
           <textarea 
           className="app-input-name"
-          placeholder="Enter Name"
+          placeholder="danny@dwpmetatecture.com"
           onChange={(e) => setName(e.target.value)}
           />
-          
-          <h2>Imagine a design</h2>
+          <br></br>
+          <p>
+            Imagine your perfect holiday suite? 
+            <br></br>
+            location - room color - pets
+            </p>
           <textarea
             className="app-input"
             placeholder={placeholder}
@@ -96,68 +96,44 @@ function App() {
           />
           <br></br>
 
-          <h2>Optional - Vibe</h2>
+          <h2>Style</h2>
           <input type="text" list="vibes1" className="app-list"
           onChange={(e) => setVibe(e.target.value)}/>
           <datalist id="vibes1">
-            <option>Isometric 3D</option>
-            <option>3D render</option>
-            <option>Pixel Art</option>
-            <option>Cyberpunk</option>
-            <option>Afrofuturism</option>
-            <option>Vaporwave</option>
-            <option>Post-apocalyptic</option>
-            <option>Kodachrome</option>
-            <option>Autochrome</option>
-            <option>Lomography</option>
-            <option>Polaroid</option>
-            <option>Black and white, Tri-X 400TX</option>
-            <option>Infrared photography</option>
-            <option>Instagram, Hipstamatic</option>
-            </datalist>
-
-          <h2>Optional - Photography Style</h2>
-          <input type="text" list="photography" className="app-list"
-          onChange={(e) => setPhoto(e.target.value)}/>
-          <datalist id="photography">
-            <option>wide shot</option>
-            <option>close-up</option>
-            <option>medium shot</option>
-            <option>long shot</option>
-            <option>Overhead view</option>
-            <option>low angle</option>
-            <option>aerial view</option>
-            <option>titled frame</option>
-            <option>over-the-shoulder</option>
-            </datalist>
+            <option>chic modern design style</option>
+            <option>classical design style</option>
+            <option>timeless design style</option>
+            <option>ultra modern minimalist design style</option>
+            <option>modernist design style</option>
+            <option>craft design style</option>
+            <option>international design style</option>     
+            </datalist>         
             
-          <h2>Optional - Camera Type</h2>
-          <input type="text" list="camera" className="app-list"
-          onChange={(e) => setCamera(e.target.value)}/>
-          <datalist id="camera">
-            <option>Sigma 85 mm</option>
-            <option>Fast shutter speed</option>
-            <option>Slow shutter speed</option>
-            <option>Bokeh</option>
-            <option>Tilt shift photography</option>
-            <option>Macro lens</option>
-            <option>Wide angle lens, 15mm</option>
-            <option>Deep depth of field,</option>
+          <h2>Floor</h2>
+          <input type="text" list="flooring" className="app-list"
+          onChange={(e) => setFlooring(e.target.value)}/>
+          <datalist id="flooring">
+            <option>white marble flooring</option>
+            <option>blond wood flooring</option>
+            <option>walnut wood flooring</option>
+            <option>gray stone flooring</option>
+            <option>chevron flooring</option>
+            <option>herringbone flooring</option>
+            <option>carpet flooring</option>
+            <option>decrotive tile flooring</option>
             </datalist>
           
-            <h2>Optional - Lighting Settings</h2>
-          <input type="text" list="lighting" className="app-list"
-          onChange={(e) => setLight(e.target.value)}/>
-          <datalist id="lighting">
-            <option>Warm lighting</option>
-            <option>Low-key lighting</option>
-            <option>Backlighting, backlit </option>
-            <option>Studio lighting</option>
-            <option>High-key lighting</option>
-            <option>Golden hour</option>
-            <option>Blue hour</option>
-            <option>Midday</option>
-            <option>shadow & silhouette</option>
+            <h2>Ceiling</h2>
+          <input type="text" list="ceiling" className="app-list"
+          onChange={(e) => setCeiling(e.target.value)}/>
+          <datalist id="ceiling">
+            <option>High ceiling with artificial lighting</option>
+            <option>vaulted ceiling with natural lighting</option>
+            <option>cathedral ceiling with natural lighting</option>
+            <option>coffered ceiling with artificial lighting</option>
+            <option>tray ceiling with artificial lighting</option>
+            <option>barrel vaulted ceiling with artificial lighting</option>
+            <option>groin vault ceiling with artificial lighting</option>
             </datalist>
           
           <button className="app-button"
