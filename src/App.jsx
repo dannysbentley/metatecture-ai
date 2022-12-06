@@ -16,7 +16,7 @@ function App() {
   
   const [loading, setLoading] = useState(false);
   const [placeholder, setPlaceholder] = useState(
-    "Spring in Rome Italy in light blue room with a gray kitten."
+    "Spring in Rome Italy in light blue room with beach view."
   );
 
   // API key 
