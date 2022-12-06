@@ -83,9 +83,9 @@ function App() {
           />
           <br></br>
           <p>
-            Imagine your perfect holiday suite? 
+            Imagine Your Perfect Holiday Suite? 
             <br></br>
-            location - room color - pets
+            Location - Room Color
             </p>
           <textarea
             className="app-input"
